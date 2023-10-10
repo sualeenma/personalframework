@@ -42,9 +42,9 @@ CSS TABLE OF CONTENTS
     --color-links: rgb(51 102 204 / 1);
     --color-links-dark: rgb(0 51 153 / 1);
     --color-accent-color: rgb(102, 204, 124);
-    --color-header-bg: rgb(105, 0, 102);
+    --color-header-bg: rgb(97, 7, 105);
     --color-header-links: rgb(255, 255, 255);
-    --color-hero-bg: rgb(234, 149, 231);
+    --color-hero-bg: rgb(97, 7, 105);
     --color-footer-bg: rgb(0 0 0 / 1);
     --color-footer-text: rgb(255, 255, 255);
     --color-footer-links: rgb(227, 162, 238);
@@ -246,6 +246,15 @@ section {
 /* HERO SECTION */
 .hero {
     background-color: var(--color-hero-bg);
+    padding-top: 8em;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.hero h1 {
+    color: white;
 }
 
 /* SITE FOOTER */
@@ -292,4 +301,60 @@ section {
     font-size: 2em;
     font-weight: normal;
     margin: 1rem 0;
+}
+
+/* animation  */
+
+.fade-in {
+    animation-name: my-fade-in;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes my-fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-and-slide-in-from-left {
+    transform: translateX(-40px);
+    animation-name: my-fade-and-slide-in-from-left;
+    animation-duration: .7s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes my-fade-and-slide-in-from-left {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.fade-and-slide-up-from-bottom {
+    transform: translateX(-40px);
+    animation-name: my-fade-and-slide-up-from-bottom;
+    animation-duration: .7s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes my-fade-and-slide-up-from-bottom {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
 }
