@@ -358,3 +358,47 @@ section {
         transform: translateY(0px);
     }
 }
+
+/* SCROLL TRIGGERED ANIMATION */
+
+
+.animate-me-on-scroll.shimmy-up > * {
+    opacity: 0;
+    transform: translateY(100px);
+}
+
+.animate-me-on-scroll.shimmy-up[data-sectionstate="active"] > * {
+    opacity: 1;
+    transform: translateY(0px);
+    transition: all .6s ease-out;
+}
+
+.animate-me-on-scroll.shimmy-up[data-sectionstate="active"] > *:nth-child(1) {
+    transition-delay: 0;
+}
+
+.animate-me-on-scroll.shimmy-up[data-sectionstate="active"] > *:nth-child(2) {
+    transition-delay: .2s;
+}
+
+.animate-me-on-scroll.shimmy-up[data-sectionstate="active"] > *:nth-child(3) {
+    transition-delay: .4s;
+}
+
+.animate-me-on-scroll.bring-together > * {
+    opacity: 0;
+}
+
+.animate-me-on-scroll.bring-together > *:nth-child(1) {
+    transform: translateX(-100px);
+}
+
+.animate-me-on-scroll.bring-together > *:nth-child(2) {
+    transform: translateX(100px);
+}
+
+.animate-me-on-scroll.bring-together[data-sectionstate="active"] > * {
+    opacity: 1;
+    transform: translateX(0);
+    transition: all .6s ease-out;
+}
