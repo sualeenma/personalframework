@@ -23,6 +23,7 @@ CSS TABLE OF CONTENTS
 
 # CUSTOM STYLING
     #CUSTOM TYPE BLOCK/SPECIMEN
+    #CUSTOM HELPERS
 
 */
 
@@ -288,6 +289,12 @@ section {
 /* -----CUSTOM STYLING----- */
 /* ------------------------ */
 
+/* CUSTUM HELPERS */
+.hide-visually {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
 
 /* CUSTOM TYPE BLOCK: HEADLINE AND SUB HEADLINE */
 .headline {
