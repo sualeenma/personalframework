@@ -409,3 +409,51 @@ section {
     transform: translateX(0);
     transition: all .6s ease-out;
 }
+
+/* SITE NAV */
+
+
+.site-header .site-nav ul {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: red;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    min-height: 100vh;
+    width: 100%;
+
+}
+
+.site-header .site-nav[data-navstate="closed"] ul {
+    transform: translateX(100vw);
+    transition: all .3s ease-in;
+}
+
+.site-header .site-nav[data-navstate="open"] ul {
+    transform: translateX(0);
+    transition: all .3s ease-out;
+}
+
+/* SITE NAV MENU BUTTON */
+.site-header .site-nav .menu-button {
+    position: absolute;
+    z-index: 200;
+    top: 2em;
+    right: 2em;
+}
+
+.site-header .site-nav[data-navstate="open"] .menu-button {
+    position: fixed;
+}
+
+.site-header .site-nav a {
+    display: block;
+    padding: 1em;
+}

@@ -14,3 +14,19 @@ const myobserver = new IntersectionObserver((entries) => {
     myobserver.observe(section);
   });
   
+  // TOGGLE MAIN OVERLAY MENU VIA MENU BUTTON
+
+const mymenubutton = document.querySelector('.site-header .menu-button');
+const mysitenav = document.querySelector('.site-header .site-nav');
+
+console.log(mymenubutton);
+console.log(mysitenav);
+
+mymenubutton.onclick = function() {
+  // if nav is open, then close it; else open it
+  if ( mysitenav.getAttribute('data-navstate')=== 'open') {
+     mysitenav.setAttribute('data-navstate', 'closed');
+  } else {
+    mysitenav.setAttribute('data-navstate', 'open');
+  }
+};
