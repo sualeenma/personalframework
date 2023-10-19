@@ -466,6 +466,9 @@ section {
     transform-origin: center center;
 }
 
+.site-nav[data-navstate="closed"] .navicon-top {
+    transform: translate(0,0) rotate(0);
+}
 
 .site-nav[data-navstate="open"] .navicon-top {
     transform: translate(-7px,7px) rotate(45deg);
