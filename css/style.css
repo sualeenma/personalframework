@@ -445,12 +445,64 @@ section {
 .site-header .site-nav .menu-button {
     position: absolute;
     z-index: 200;
-    top: 2em;
-    right: 2em;
+    top: 1em;
+    right: 1.25em;
+    padding: 0;
+    margin: 0;
+    border: none;
+    background-color: transparent;
 }
 
 .site-header .site-nav[data-navstate="open"] .menu-button {
     position: fixed;
+}
+
+.site-nav .menu-button svg {
+    display: block;
+}
+
+.site-nav .menu-button svg rect{
+    fill: white;
+    transform-origin: center center;
+}
+
+
+.site-nav[data-navstate="open"] .navicon-top {
+    transform: translate(-7px,7px) rotate(45deg);
+    animation: navicon-top-toggle .4s ease-out forwards;
+}
+
+@keyframes navicon-top-toggle {
+    0% { 
+        transform: translate(0,0) rotate(0);
+    }
+    50% {
+        transform: translate(0px,11px) rotate(0);
+    }
+    100% { 
+        transform: translate(-7px,7px) rotate(45deg);
+    }
+}
+
+.site-nav[data-navstate="open"] .navicon-mid {
+    opacity: 0;
+}
+
+.site-nav[data-navstate="open"] .navicon-bot {
+    transform: translate(-7px,-7px) rotate(-45deg);
+    animation: navicon-bot-toggle .4s ease-out forwards;
+}
+
+@keyframes navicon-bot-toggle {
+    0% { 
+        transform: translate(0,0) rotate(0);
+    }
+    50% {
+        transform: translate(0px,-11px) rotate(0);
+    }
+    100% { 
+        transform: translate(-7px,-7px) rotate(-45deg);
+    }
 }
 
 .site-header .site-nav a {
